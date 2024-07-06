@@ -1,0 +1,51 @@
+.featured-image {
+  width: 100%;
+  max-width: 600px; 
+  height: auto; 
+  margin: 20px 0; 
+}
+
+.donation-form {
+  padding: 20px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.donation-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.donation-form input[type="text"] {
+  padding: 10px;
+  margin: 0 0 10px 0;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.donation-form button {
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.donation-form button:hover {
+  background-color: #0056b3;
+}
+
+.revealable {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.active {
+  transform: translateY(0px);
+  opacity: 1;
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Helping Hands Dental Care</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="Pictures/icont.png" type="icon">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', sans-serif;
+      background-color: white;
+    }
+
+    .header {
+      background-color: steelblue;
+      color: #F4F7FA;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    .nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    .nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .images-row {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    .images-row img {
+      max-width: 20%;
+      height: auto;
+    }
+
+    .action-row {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    .action-row section {
+      flex: 1;
+      padding: 20px;
+      border: 1px solid #D3D3D3;
+      border-radius: 8px;
+    }
+
+    h1,
+    h2,
+    p,
+    a,
+    button {
+      margin: 10px 0;
+    }
+
+    button {
+      background-color: #008CBA;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .testimonial {
+      padding: 20px;
+      border-left: 4px solid orange;
+      font-style: italic;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 25%;
+      padding-top: 25px;
+      height: 0;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+    }
+
+    .dark-theme {
+      background-color: darkgrey;
+      color: #f4f4f4;
+    }
+
+    .dark-theme .header, .dark-theme .footer {
+      background-color: #707070;
+      color: white;
+    }
+
+    .dark-theme .nav a {
+      color: #ddd;
+    }
+
+    .dark-theme button {
+      background-color: darkgoldenrod;
+      color: #D3D3D3;
+    }
+
+    .footer {
+      background-color: cadetblue;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+      <h1>Helping Hands Dental Care</h1>
+      <p>Making Dental Care Accessible to Everyone</p>
+      <button id="theme-toggle">Dark Mode</button>
+  </div>
+  <div class="nav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#impact">Impact</a>
+  </div>
+
+  <div class="container">
+    <section id="about" class="active"> 
+      <h2>About Us</h2>
+      <div class="images-row">
+        <img src="Pictures/picture1.png" alt="Chompers">
+        <img src="Pictures/picture2.png" alt="Woman getting dental work">
+      </div>
+      <p>We are a nonprofit organization dedicated to providing dental care to those who cannot afford it. Join us in our mission to bring smiles to everyone.</p>
+    </section>
+
+    <div class="action-row active">
+      <section class="donation-section">
+        <h2>Make a Donation</h2>
+        <p>Your support helps us reach more people in need. Thank you for your generosity!</p>
+        <button onclick="location.href='DONATION_BUTTON'">Donate Now</button>
+      </section>
+
+      <section class="volunteer-section">
+        <h2>Volunteer with Us</h2>
+        <p>Your time and skills can make a real difference in people's lives.</p>
+        <button onclick="location.href='VOLUNTEER_BUTTON'">Sign Up to Volunteer</button>
+      </section>
+    </div>
+
+    <section id="impact" class="active">
+      <h2>Impact</h2>
+      <p>Our work has impacted the lives of thousands, providing essential dental services to those in need. Your involvement makes this possible.</p>
+    </section>
+
+    <!-- Petition section -->
+    <section class="petition active" id="petition">
+      <h2>Sign Our Petition 📢</h2>
+      <div class="petition-container">
+          <div class="petition-para">
+              <p>We are calling on community members to support our initiative to expand dental care facilities in underserved areas. Your signature can make a big difference!</p>
+          </div>
+          <div class="signatures">
+              <p>🖊️ MJ from Brooklyn supports this.</p>
+              <p>🖊️ Casey from Queens supports this.</p>
+              <p>🖊️ Taylor from Harlem supports this.</p>
+          </div>
+      </div>
+      <!--- Sign Petition  --->
+      <form id="sign-petition" title="sign-petition">
+          <input type="text" placeholder="Your Name" required>
+          <input type="text" placeholder="Your City" required>
+          <button type="submit" id="sign-now-button">Sign Now</button>
+        <div id="signatures"> </div>
+      </form>
+  </section>
+
+    <section class="active revealable">
+      <h2>Educational Video</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/OkZLYwA_qdE?si=5lUIPFHtbRnYYlVN" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="active revealable">
+      <h2>Learn More</h2>
+      <a href="RESOURCE1">Dental Health Resource 1</a><br>
+      <a href="RESOURCE2">Dental Health Resource 2</a>
+    </section>
+  </div>
+  <div class="footer">
+    <p>Connect with us:</p>
+    <a href="https://www.facebook.com">Facebook</a> |
+    <a href="https://www.twitter.com">Twitter</a> |
+    <a href="https://www.instagram.com">Instagram</a>
+  </div>
+
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+      document.body.classList.toggle('dark-theme');
+    });
+
+    document.getElementById('sign-petition-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const city = document.getElementById('city').value;
+      if (name && city) {
+        document.getElementById('signatures').innerHTML += `<p>🖊️ ${name} from ${city} supports this.</p>`;
+        document.getElementById('name').value = '';
+        document.getElementById('city').value = '';
+      } else {
+        alert('Please, enter both your name and city.');
+      }
+    });
+  </script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
